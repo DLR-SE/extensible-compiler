@@ -1,0 +1,6 @@
+[submodule "CoreDSL2TableGen"]
+	path = CoreDSL2TableGen
+	url = git@github.com:DLR-SE/CoreDSL2TableGen.git
+[submodule "RISCV-CoreDSL-Extensions"]
+	path = RISCV-CoreDSL-Extensions
+	url = git@github.com:DLR-SE/RISCV-CoreDSL-Extensions.git
