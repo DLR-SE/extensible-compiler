@@ -4,3 +4,6 @@
 [submodule "RISCV-CoreDSL-Extensions"]
 	path = RISCV-CoreDSL-Extensions
 	url = git@github.com:DLR-SE/RISCV-CoreDSL-Extensions.git
+[submodule "llvm"]
+	path = llvm
+	url = git@github.com:DLR-SE/llvm
