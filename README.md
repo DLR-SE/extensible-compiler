@@ -14,7 +14,14 @@ This README provides a sketch of building the patched LLVM toolchain on an up-to
 
 ## Clone the repository including submodules
 
-git clone https://github.com/DLR-SE/extensible-compiler.git --recurse-submodules
+Cloning via SSH is straightforward:
+
+    git clone git@github.com:DLR-SE/extensible-compiler.git --recurse-submodules
+
+Alternatively if SSH is blocked (e.g. by a firewall) then cloning via HTTPS needs the submodule paths substituted:
+
+    git config --global url.https://github.com/.insteadOf git@github.com:
+    git clone https://github.com/DLR-SE/extensible-compiler.git --recurse-submodules
 
 ## Add the coredsl and metadata for the extension
 
