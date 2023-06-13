@@ -1,9 +1,12 @@
 [submodule "CoreDSL2TableGen"]
 	path = CoreDSL2TableGen
-	url = git@github.com:DLR-SE/CoreDSL2TableGen.git
+	url = ../coredsl2tablegen.git
+	branch = main
 [submodule "RISCV-CoreDSL-Extensions"]
 	path = RISCV-CoreDSL-Extensions
-	url = git@github.com:DLR-SE/RISCV-CoreDSL-Extensions.git
+	url = ../riscv-coredsl-extensions.git
+	branch = main
 [submodule "llvm"]
 	path = llvm
-	url = git@github.com:DLR-SE/llvm
+	url = ../llvm.git
+	branch = main
