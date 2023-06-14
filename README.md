@@ -4,9 +4,9 @@ A lightweight tool for generating a C/C++ compiler for a RISC-V extension.
 
 ## Overview
 Given a description of a RISC-V extension this tool patches a LLVM toolchain with support for the additional instructions. It is comprised of several submodules:
-1. riscv-coredsl-extensions - CoreDSL descriptions of standard and custom extensions
-1. coredsl2tablegen - generates patches for LLVM code from CoreDSL
-1. llvm - current release of LLVM toolchain prepared for patching
+1. `RISCV-CoreDSL-Extensions` - CoreDSL descriptions of standard and custom extensions
+1. `CoreDSL2TableGen` - generates patches for LLVM code from CoreDSL
+1. `llvm` - current release of LLVM toolchain prepared for patching
 
 The standard workflow is preparing the CoreDSL description of the extension, generating and applying the LLVM patches, then building the compiler toolchain.
 
@@ -45,10 +45,14 @@ Prefix the path with the exported toolchain bin directory
 
 Custom extensions are not included by default and must be explicitly enabled when compiling by adding them to the architecture list prefixed by the letter 'x' (experimental). 
 
+    clang -target riscv32 -march=rv32ixrbnn -c ../RISCV-CoreDSL-Extensions/bosch_NN.c
 
-    clang -target riscv32 -march=rv32ixrbnn -c clang/test/CodeGen/riscv-s4e/bosch_NN.c
+The test file used in this example also demonstrates how a regression test case can be added for an extension, using the llvm-lit and FileCheck tools to automate its execution and evaluation. For this it needs to be copied to a suitable path within the test hierarchy:
 
-The test file used in this example also demonstrates how a regression test case can be added for an extension, using the llvm-lit and FileCheck tools to automate its execution and evaluation. To run just this one test case
+    mkdir -p clang/test/CodeGen/riscv-s4e
+    cp ../RISCV-CoreDSL-Extensions/bosch_NN.c clang/test/CodeGen/riscv-s4e 
+
+Then to run just this one test case
 
     env LIT_FILTER=bosch_nn.c llvm-lit -v clang/test/CodeGen
 
