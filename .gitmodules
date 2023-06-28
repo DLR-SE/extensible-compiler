@@ -10,3 +10,6 @@
 	path = llvm
 	url = ../llvm.git
 	branch = main
+[submodule "RISCV-CoreDSL-Partner-Extensions"]
+	path = RISCV-CoreDSL-Partner-Extensions
+	url = https://gitlab.dlr.de/scale4edge/RISCV-CoreDSL-Partner-Extensions.git
