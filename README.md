@@ -67,12 +67,12 @@ Prefix the path with the exported toolchain bin directory
 
 Experimental extensions are not enabled by default and must be explicitly enabled when compiling by adding them to the architecture list prefixed by the letter 'x'. 
 
-    clang -target riscv32 -march=rv32ixs4emac -c ../RISCV-CoreDSL-Extensions/s4e_mac.test.c
+    clang -target riscv32 -march=rv32ixs4emac -c ../RISCV-CoreDSL-Extensions/s4e-mac.test.c
 
 The test file used in this example also demonstrates how a regression test case can be added for an extension, using the llvm-lit and FileCheck tools to automate its execution and evaluation. For this it needs to be copied to a suitable path within the test hierarchy:
 
     mkdir -p clang/test/CodeGen/riscv-s4e
-    cp ../RISCV-CoreDSL-Extensions/s4e_mac.test.c clang/test/CodeGen/riscv-s4e 
+    cp ../RISCV-CoreDSL-Extensions/s4e-mac.test.c clang/test/CodeGen/riscv-s4e 
 
 Then to run just this one test case
 
