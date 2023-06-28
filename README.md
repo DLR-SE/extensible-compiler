@@ -5,7 +5,7 @@ A lightweight tool for generating a C/C++ compiler for a RISC-V extension.
 ## Overview
 Given a description of a RISC-V extension this tool patches a LLVM toolchain with support for the additional instructions. It is comprised of several submodules:
 1. `RISCV-CoreDSL-Extensions` - CoreDSL descriptions of public standard and custom extensions
-1.  RISCV-CoreDSL-Partner-Extensions - CoreDSL descriptions of Scale4Edge-partner extensions 
+1. `RISCV-CoreDSL-Partner-Extensions` - CoreDSL descriptions of Scale4Edge-partner extensions 
 1. `CoreDSL2TableGen` - generates patches for LLVM code from CoreDSL
 1. `llvm` - current release of LLVM toolchain prepared for patching
 
@@ -13,9 +13,9 @@ The standard workflow is preparing the CoreDSL description of the extension, gen
 
 ## Clone the repository
 
-Users who do not belong to the Scale4Edge project should jump to the following sub-section.
+Users who do not belong to the Scale4Edge project should jump to the following "Anonymous public access" sub-section.
 
-### Scale4Edge project members
+### Cloning by Scale4Edge project members
 
 Before being able to clone the partner-only material you will need access to be granted in GitHub and to authenticate yourself during the cloning.
 
@@ -28,7 +28,7 @@ Alternatively if SSH is blocked (e.g. by a firewall) then cloning via HTTPS need
     git config --global url.https://github.com/.insteadOf git@github.com:
     git clone https://github.com/DLR-SE/extensible-compiler.git --recurse-submodules
 
-### Anonymous public access
+### Cloning by anonymous public access
 
 To avoid errors you need to not clone the partner-only repository.
 
