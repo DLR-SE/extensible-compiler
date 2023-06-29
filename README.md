@@ -76,7 +76,7 @@ The test file used in this example also demonstrates how a regression test case 
 
 Then to run just this one test case
 
-    env LIT_FILTER=s4e-mac.test.c llvm-lit -v clang/test/CodeGen
+    env LIT_FILTER=s4e-mac.test.c build/bin/llvm-lit -v clang/test/CodeGen
 
 or to run the complete regression test set including this test case:
 
