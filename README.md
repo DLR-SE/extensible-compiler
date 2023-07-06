@@ -55,7 +55,7 @@ As preparation: the host needs a current system compiler (GCC or clang) and cmak
 
 Starting in the `llvm` directory
 
-    cmake llvm -G "Ninja" -B build -DLLVM_USE_LINKER=lld -DCMAKE_BUILD_TYPE=Release -DLLVM_TARGETS_TO_BUILD='RISCV' -DLLVM_ENABLE_PROJECTS='clang;lld' -DCMAKE_INSTALL_PREFIX=$HOME/llvm -DLLVM_OPTIMIZED_TABLEGEN=1
+    cmake llvm -G "Ninja" -B build -DLLVM_USE_LINKER=lld -DCMAKE_BUILD_TYPE=Release -DLLVM_TARGETS_TO_BUILD='RISCV' -DLLVM_ENABLE_PROJECTS='clang;lld' -DCMAKE_INSTALL_PREFIX=$HOME/llvm -DLLVM_EXTERNAL_LIT=build/bin/llvm-lit
     ninja -C build
     ninja -C build install
  
