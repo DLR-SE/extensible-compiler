@@ -13,3 +13,4 @@
 [submodule "RISCV-CoreDSL-Partner-Extensions"]
 	path = RISCV-CoreDSL-Partner-Extensions
 	url = ../RISCV-CoreDSL-Partner-Extensions.git
+	branch = main
