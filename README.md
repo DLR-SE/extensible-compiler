@@ -45,6 +45,14 @@ Configuring the partner sub-module as non-cloned avoids the need to specify this
 
     git -C extensible-compiler config submodule.RISCV-CoreDSL-Partner-Extensions.update none 
 
+## Set the submodules to track the remote branches
+
+    cd extensible-compiler
+    git -C CoreDSL2TableGen/ switch main
+    git -C llvm/ switch main
+    git -C RISCV-CoreDSL-Extensions/ switch main
+    git -C RISCV-CoreDSL-Partner-Extensions/ switch main
+
 ## Add the coredsl and metadata for the extension
 
 See CoreDSL2TableGen/README.md for details on generating support for an extension and patching the `llvm` repository. The following sections are written for the sample S4E_MAC extension; you will need to substitute names and paths appropriately for other extensions.
@@ -55,7 +63,7 @@ As preparation: the host needs a current system compiler (GCC or clang) and cmak
 
 Starting in the `llvm` directory
 
-    cmake llvm -G "Ninja" -B build -DLLVM_USE_LINKER=lld -DCMAKE_BUILD_TYPE=Release -DLLVM_TARGETS_TO_BUILD='X86;RISCV' -DLLVM_ENABLE_PROJECTS='clang;lld' -DCMAKE_INSTALL_PREFIX=$HOME/llvm -DLLVM_INSTALL_UTILS=ON -DLLVM_EXTERNAL_LIT=build/bin/llvm-lit
+    cmake llvm -G "Ninja" -B build -DCMAKE_BUILD_TYPE=Release -DLLVM_TARGETS_TO_BUILD='X86;RISCV' -DLLVM_ENABLE_PROJECTS='clang;lld' -DCMAKE_INSTALL_PREFIX=$HOME/llvm -DLLVM_INSTALL_UTILS=ON -DLLVM_EXTERNAL_LIT=build/bin/llvm-lit
     ninja -C build
     ninja -C build install
  
