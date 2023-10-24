@@ -91,3 +91,14 @@ or to run the complete regression test set including this test case:
     ninja -C build check
 
 Documentation for this is under https://llvm.org/docs/TestingGuide.html
+
+## License
+
+[Apache License 2.0](./LICENSE)
+
+## Acknowledgment
+
+<img src="./images/BMBF_gefoerdert_2017_en.jpg" alt="drawing" height="75" align="left" >
+
+This research is partially funded by the German Federal Ministry of Education and Research (BMBF) within
+the project [Scale4Edge](https://www.edacentrum.de/scale4edge/) (grant number 16ME0465).
