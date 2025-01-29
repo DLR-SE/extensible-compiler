@@ -1,3 +1,6 @@
+> [!NOTE]
+> This project is being continued together with TUM under the name [Seal5](https://github.com/tum-ei-eda/seal5).
+
 # extensible-compiler
 
 A lightweight tool for generating a C/C++ compiler for a RISC-V extension.
